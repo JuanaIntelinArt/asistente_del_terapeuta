@@ -1,0 +1,66 @@
+.help-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.main-content {
+  width: 100%;
+  max-width: 700px;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4b7195; /* Usamos el color azul del botón */
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.help-section {
+  margin-bottom: 2rem;
+}
+
+.card-item,
+.idea-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-item:last-child,
+.idea-item:last-child {
+  border-bottom: none;
+}
+
+.chat-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #4b7195;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.chat-button:hover {
+  background-color: #355670;
+}
