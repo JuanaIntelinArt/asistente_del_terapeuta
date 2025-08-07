@@ -1,5 +1,6 @@
+// src/components/Header.jsx
 import React from 'react';
-import { Link } from 'react-router-dom'; // Importa Link
+import { NavLink } from 'react-router-dom';
 import './Header.css';
 import logo from '../assets/logo.png';
 
@@ -11,10 +12,12 @@ const Header = () => {
         <span className="app-title">Asistente del Terapeuta</span>
       </div>
       <nav className="header-nav">
-        <Link to="/home">Inicio</Link>
-        <Link to="/ayuda">Ayuda</Link>
-        <Link to="/chat">Chat</Link>
-        <Link to="/perfil">Perfil</Link>
+        <NavLink to="/home" className={({ isActive }) => isActive ? "active" : ""}>Inicio</NavLink>
+        <NavLink to="/ayuda" className={({ isActive }) => isActive ? "active" : ""}>Te Escucho...</NavLink>
+        <NavLink to="/perfil" className={({ isActive }) => isActive ? "active" : ""}>Perfiles de los Profesionales</NavLink>
+        
+        {/* Nuevo botón de Ingresar */}
+        <NavLink to="/login" className="login-button-link">Ingresar</NavLink>
       </nav>
     </header>
   );

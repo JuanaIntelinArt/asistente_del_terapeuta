@@ -1,0 +1,101 @@
+/* src/pages/TherapistProfilePage.css */
+
+.therapist-profile-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.profile-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4b7195;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Contenedor para múltiples tarjetas, con espacio entre ellas */
+.therapist-card-container {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 2rem; /* Espacio entre cada tarjeta */
+}
+
+/* El resto del código CSS se mantiene igual */
+
+.therapist-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.therapist-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+  border: 2px solid #ccc;
+}
+
+.therapist-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4b7195;
+  margin: 0;
+}
+
+.therapist-bio {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0.25rem 0;
+}
+
+.profile-status {
+  display: flex;
+  align-items: center;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #4caf50;
+  margin-right: 0.5rem;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.action-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.action-button.primary {
+  background-color: #4b7195;
+  color: white;
+}
+
+.action-button.secondary {
+  background-color: #e3f2fd;
+  color: #4b7195;
+}
+
+.appointment-info {
+  margin-top: 1.5rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.appointment-location {
+  font-size: 0.9rem;
+  color: #777;
+}

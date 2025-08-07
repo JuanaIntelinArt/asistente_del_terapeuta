@@ -8,30 +8,13 @@ const HelpPage = () => {
     <div className="help-page">
       <Header />
       <main className="main-content">
-        <h1 className="title">Estás en un lugar seguro</h1>
+        <h1 className="title">Este es un espacio para ti</h1>
         <p className="subtitle">Aquí encontrarás recursos y apoyo para cualquier situación.</p>
 
-        {/* Sección de Apoyo Inmediato */}
-        <section className="help-section">
-          <Card title="Apoyo Inmediato">
-            <div className="card-item">
-              <span>Terapia de Guardia</span>
-              <button>Llamar</button>
-            </div>
-            <div className="card-item">
-              <span>Línea de crisis emocional</span>
-              <button>Llamar</button>
-            </div>
-            <div className="card-item">
-              <span>Servicio de Emergencia</span>
-              <button>Llamar</button>
-            </div>
-          </Card>
-        </section>
-
+       
         {/* Sección de Chat de Apoyo */}
         <section className="help-section">
-          <Card title="Chat de Apoyo">
+          <Card title="Chat con el asistente del terapeuta">
             <p>Escribe aquí para comenzar un chat de apoyo en tiempo real.</p>
             <button className="chat-button">Iniciar chat de apoyo</button>
           </Card>
@@ -61,8 +44,8 @@ const HelpPage = () => {
 
         {/* Sección de Centros de Apoyo */}
         <section className="help-section">
-          <Card title="Centros de Apoyo Cercanos">
-            <p>Encuentra centros de apoyo cercanos a tu ubicación.</p>
+          <Card title="Donde esta el Departamento de Psicologia de la universidad">
+            <p>Encuentra el departamento de psicologia de la universidad.</p>
             <button>Ver Mapa</button>
           </Card>
         </section>

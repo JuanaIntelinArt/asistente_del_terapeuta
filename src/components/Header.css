@@ -19,8 +19,8 @@
 }
 
 .logo-icon {
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
   margin-right: 1rem;
 }
 
@@ -34,7 +34,7 @@
 .header-nav a {
   margin-left: 1.5rem;
   /* Color de texto más claro para los enlaces */
-  color: #ae8ea2;
+  color: #3c2533;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s;
@@ -42,4 +42,21 @@
 
 .header-nav a:hover {
   color: #4b7195;
+}
+
+/* ... otros estilos del header ... */
+
+.login-button-link {
+  background-color: #b2e3a0;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 2rem;
+  transition: background-color 0.2s;
+}
+
+.login-button-link:hover {
+  background-color: #020102;
 }

@@ -1,0 +1,65 @@
+.activity-bar-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 2rem 0;
+}
+
+.activity-bar-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.activity-buttons-scroll-container {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto; /* Permite el scroll horizontal */
+  padding-bottom: 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Ocultar la barra de scroll en navegadores WebKit (Chrome, Safari) */
+.activity-buttons-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.activity-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.activity-button:hover {
+  transform: scale(1.05);
+}
+
+/* Colores de fondo para cada botón según el diseño */
+.activity-button.todas {
+  background-color: #a48cb6; /* Morado claro */
+}
+
+.activity-button.relajacion {
+  background-color: #6a1b9a; /* Morado intenso */
+}
+
+.activity-button.energia {
+  background-color: #fdd835; /* Amarillo */
+}
+
+.activity-button.concentracion {
+  background-color: #ffb74d; /* Naranja */
+}
+
+.activity-button.social {
+  background-color: #26a69a; /* Verde azulado */
+}
+
+.activity-button.creatividad {
+  background-color: #4b7195; /* Azul */
+}

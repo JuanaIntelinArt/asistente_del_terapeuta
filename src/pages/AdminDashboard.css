@@ -1,0 +1,100 @@
+/* src/pages/AdminDashboard.css */
+
+.admin-dashboard-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.admin-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4b7195;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 3rem;
+}
+
+.dashboard-button {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #6a1b9a;
+  background-color: #f3e5f5;
+  border: 2px solid #6a1b9a;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dashboard-button:hover {
+  background-color: #e1bee7;
+}
+
+/* Estilos para la sección de gestión de terapeutas */
+.therapist-management-container {
+  width: 100%;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.therapist-management-container h3 {
+  font-size: 1.5rem;
+  color: #4b7195;
+  margin-bottom: 1.5rem;
+}
+
+.therapist-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.therapist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.therapist-item:last-child {
+  border-bottom: none;
+}
+
+.therapist-options-button {
+  padding: 0.5rem 1rem;
+  background-color: #ae8ea2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.therapist-actions {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.add-therapist-button {
+  padding: 1rem 2rem;
+  background-color: #4b7195;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}

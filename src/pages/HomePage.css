@@ -7,7 +7,6 @@
 
 .main-content {
   width: 100%;
-  /* Reducimos el ancho máximo para hacer el recuadro más pequeño */
   max-width: 600px; 
   text-align: center;
   padding: 2rem;
@@ -20,7 +19,6 @@
 .greeting-title {
   font-size: 2.5rem;
   font-weight: 700;
-  /* Color violeta intenso */
   color: #4b7195;
   margin-bottom: 0.5rem;
 }
@@ -39,19 +37,20 @@
 }
 
 .sentimiento-input {
-  width: 70%;
+  width: 90%;
   min-height: 120px;
   padding: 1rem;
   border: 3px solid #4b7195;
   border-radius: 10px;
-  font-size: 1rem; /* Puedes probar con 0.9rem o un valor similar */
+  font-size: 1rem;
   resize: vertical;
 }
 
 .sentimiento-input::placeholder {
   color: #d3b7b7;
-  font-size: 0.9rem; /* También puedes ajustar el tamaño del placeholder directamente */
+  font-size: 0.9rem;
 }
+
 .submit-button {
   width: 100%;
   padding: 1rem;
@@ -69,23 +68,26 @@
   background-color: #ae8ea2;
 }
 
+/* Estilos unificados para los botones de acción rápida */
 .action-buttons-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
+  margin-top: 2rem;
 }
 
 .action-button {
-  background-color: #f3e5f5;
+  background-color: transparent;
   padding: 2rem;
   border-radius: 10px;
   font-weight: 600;
-  color: #845eb9;
+  color: #5346ce;
   text-align: center;
   cursor: pointer;
-  transition: background-color 0.2s;
+  border: 1px solid #6a1b9a;
+  transition: all 0.2s;
 }
 
 .action-button:hover {
-  background-color: #e1bee7;
+  background-color: #f3e5f5;
 }
