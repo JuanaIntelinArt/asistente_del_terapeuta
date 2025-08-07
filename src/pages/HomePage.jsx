@@ -16,7 +16,8 @@ const HomePage = () => {
       <Header />
       <PrivacyNotice />
       <main className="main-content">
-        <h1 className="greeting-title">Hola, ¿cómo te sientes hoy?</h1>
+
+        <h1 className="greeting-title">Bienvenido, Estudiante, ¿cómo te sientes hoy?</h1>
         <p className="greeting-subtitle">Este es el primer paso para expresar y entender lo que sientes.</p>
         
         <div className="input-container">

@@ -91,3 +91,17 @@
 .action-button:hover {
   background-color: #f3e5f5;
 }
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
+  
+  .greeting-title {
+    font-size: 1.8rem;
+  }
+  
+  .action-buttons-grid {
+    grid-template-columns: 1fr;
+  }
+}

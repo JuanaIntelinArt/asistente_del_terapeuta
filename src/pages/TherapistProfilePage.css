@@ -22,8 +22,6 @@
   margin-bottom: 2rem; /* Espacio entre cada tarjeta */
 }
 
-/* El resto del código CSS se mantiene igual */
-
 .therapist-info {
   display: flex;
   align-items: center;
@@ -66,7 +64,7 @@
 
 .profile-actions {
   display: flex;
-  gap: 1rem;
+  justify-content: center; /* Centra el botón */
   margin-top: 1.5rem;
 }
 
@@ -77,16 +75,13 @@
   border: none;
   cursor: pointer;
   transition: background-color 0.2s;
+  width: 100%; /* El botón ocupa todo el ancho */
 }
 
-.action-button.primary {
+/* Solo queda el botón de Agendar, así que le aplicamos los estilos deseados */
+.action-button.secondary {
   background-color: #4b7195;
   color: white;
-}
-
-.action-button.secondary {
-  background-color: #e3f2fd;
-  color: #4b7195;
 }
 
 .appointment-info {
@@ -98,4 +93,25 @@
 .appointment-location {
   font-size: 0.9rem;
   color: #777;
+}
+
+@media (max-width: 768px) {
+  .therapist-card-container {
+    padding: 0 1rem;
+  }
+  
+  .therapist-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .therapist-photo {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .profile-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
