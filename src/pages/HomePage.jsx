@@ -1,45 +1,68 @@
+// src/pages/HomePage.jsx
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
-import PrivacyNotice from '../components/PrivacyNotice';
-import ActivityBar from '../components/ActivityBar';
 import './HomePage.css';
 
 const HomePage = () => {
-  const [showActivityBar, setShowActivityBar] = useState(false);
+  const [sentimiento, setSentimiento] = useState('');
+  const [analisis, setAnalisis] = useState(null); // Estado para guardar el resultado del análisis
+  const navigate = useNavigate();
 
-  const handleShowActivities = () => {
-    setShowActivityBar(!showActivityBar); // Cambia el estado a su opuesto (visible/oculto)
+  const handleSubmit = async () => {
+    // URL de tu backend
+    const backendUrl = 'http://127.0.0.1:5000/analyze-sentiment';
+    
+    try {
+      const response = await fetch(backendUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ text: sentimiento }),
+      });
+      
+      if (!response.ok) {
+        throw new Error('Error al conectar con la API');
+      }
+      
+      const data = await response.json();
+      setAnalisis(data.sentiment); // Guarda el sentimiento analizado
+      
+    } catch (error) {
+      console.error('Error:', error);
+      setAnalisis('Hubo un error al analizar tu sentimiento.');
+    }
   };
 
   return (
     <div className="home-page">
       <Header />
-      <PrivacyNotice />
       <main className="main-content">
-
-        <h1 className="greeting-title">Bienvenido, Estudiante, ¿cómo te sientes hoy?</h1>
-        <p className="greeting-subtitle">Este es el primer paso para expresar y entender lo que sientes.</p>
+        <h1 className="greeting-title">Bienvenido, Estudiante</h1>
+        <p className="greeting-subtitle">Tu bienestar es la prioridad del Departamento de Psicología Universitario.</p>
         
         <div className="input-container">
           <textarea
             className="sentimiento-input"
-            placeholder="Cuéntame lo que sientes, aquí estaré para escucharte..."
+            placeholder="¿Cómo te sientes hoy? Escribe aquí..."
+            value={sentimiento}
+            onChange={(e) => setSentimiento(e.target.value)}
           ></textarea>
-          <button className="submit-button">
-            Guarda tus sentimientos
-          </button>
         </div>
 
-        {/* Restauramos los 4 botones originales */}
-        <section className="action-buttons-grid">
-          <div className="action-button">Burning out</div>
-          <div className="action-button">Ver mis emociones</div>
-          <div className="action-button">Mi Terapeuta</div>
-          <div className="action-button" onClick={handleShowActivities}>Actividades Creativas</div>
-        </section>
+        <button className="submit-button" onClick={handleSubmit}>
+          Registrar Sentimiento
+        </button>
+        
+        {/* Mostramos el resultado del análisis */}
+        {analisis && (
+          <div className="analisis-container">
+            <p>Análisis de tu sentimiento:</p>
+            <h2 className="analisis-resultado">{analisis}</h2>
+          </div>
+        )}
 
-        {/* Mostramos la barra de actividades solo si 'showActivityBar' es verdadero */}
-        {showActivityBar && <ActivityBar />}
       </main>
     </div>
   );
